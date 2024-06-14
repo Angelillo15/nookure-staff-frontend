@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "c-add": "bunx shadcn-ui@latest add",
-    "build:proto": "protoc --ts_out src/proto --proto_path proto proto/*.proto --ts_opt long_type_number --ts_opt add_pb_suffix"
+    "build:proto": "bunx protoc --ts_out src/proto --proto_path proto proto/*.proto --ts_opt long_type_number --ts_opt optimize_code_size --ts_opt add_pb_suffix"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -27,11 +27,9 @@
     "styled-components": "^6.1.11",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "ts-protoc-gen": "^0.15.0",
     "zustand": "^4.5.2"
   },
   "devDependencies": {
-    "@types/node": "^20.12.13",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
@@ -47,6 +45,8 @@
     "tailwindcss": "^3.4.3",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
-    "vite-plugin-image-optimizer": "^1.1.8"
+    "vite-plugin-image-optimizer": "^1.1.8",
+    "@protobuf-ts/plugin": "^2.9.4",
+    "@types/bun": "latest"
   }
 }
