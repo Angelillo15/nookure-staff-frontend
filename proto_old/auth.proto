@@ -1,0 +1,15 @@
+syntax = "proto3";
+package com.nookure.staff.api.proto;
+
+message AuthRequest {
+  string username = 1;
+  string otp = 2;
+}
+
+message AuthResponse {
+  bool success = 1;
+  bool expired = 2;
+  string message = 3;
+  optional string token = 4;
+}
+

@@ -1,0 +1,13 @@
+syntax = "proto3";
+package com.nookure.staff.api.proto;
+
+import "google/protobuf/timestamp.proto";
+
+message PlayerModel {
+  string name = 1;
+  string uuid = 2;
+  google.protobuf.Timestamp lastLogin = 3;
+  google.protobuf.Timestamp firstLogin = 4;
+  string lastIp = 5;
+  string firstIp = 6;
+}
